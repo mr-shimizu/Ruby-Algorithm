@@ -28,22 +28,7 @@ def search(i, pos, col, upwd, downwd)
 			end
 		end
 	end
-
 	return "FAILURE", pos
-end
-
-def print_board(pos)
-			puts pos
-		# クイーンが配置されている盤をプリントする。
-		puts "---\n|Q|\n---\n| |"
-		p "gagaga"
-		p "gagaga"
-		print "aammamama"
-		print "ggagaga"
-
-		# 番号があるますにQを入れる機能
-		# N行標示する機能
-		# N列標示する機能
 end
 
 def main	
@@ -63,7 +48,8 @@ def main
 	end
 	result, pos = search(1, pos, col, upwd, downwd)
 	if  result == "SUCCESS"
-		print_board(pos)
+		puts("解が見つかった")
+		puts pos 
 	else
 		puts("解が見つからなかった")
 	end

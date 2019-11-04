@@ -31,6 +31,23 @@ def search(i, pos, col, upwd, downwd)
 	return "FAILURE", pos
 end
 
+def print_board(pos)
+		# puts pos
+		line = "_"+("__" * N)
+		puts line
+		pos[1..-1].each do |k|
+			print "|"
+			N.times do |i|
+				if i+1 == k
+					print "Q|"
+				else
+					print "_|"
+				end
+			end
+			puts ""
+		end
+end
+
 def main	
 	pos = ["@"] #クイーンの配置 
 	col = ["@"] #列方向の利き筋
@@ -48,13 +65,14 @@ def main
 	end
 	result, pos = search(1, pos, col, upwd, downwd)
 	if  result == "SUCCESS"
-		puts("解が見つかった")
-		puts pos 
+		# puts("解が見つかった")
+		# puts pos 
+		print_board(pos)
 	else
 		puts("解が見つからなかった")
 	end
 end
-
-N = 5
+puts "N Queen Question: Input size of a board"
+N = gets.to_i
 
 main

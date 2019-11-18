@@ -33,7 +33,7 @@ end
 
 def print_board(pos)
 		# puts pos
-		line = "_"+("__" * N)
+		line = " _" * N
 		puts line
 		pos[1..-1].each do |k|
 			print "|"
@@ -74,5 +74,6 @@ def main
 end
 puts "N Queen Question: Input size of a board"
 N = gets.to_i
+# N = 5
 
 main

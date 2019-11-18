@@ -33,7 +33,7 @@ end
 
 def print_board(pos)
 		# puts pos
-		line = "_"+("__" * N)
+		line = (" _" * N)
 		puts line
 		pos[1..-1].each do |k|
 			print "|"

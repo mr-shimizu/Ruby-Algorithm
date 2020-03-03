@@ -73,7 +73,7 @@ def main
 	end
 end
 puts "N Queen Question: Input size of a board"
-N = gets.to_i
+N = 5
 # N = 5
 
 main
